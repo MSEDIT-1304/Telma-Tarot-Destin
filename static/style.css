@@ -368,14 +368,14 @@ MOBILE
 
 }
 
-@media (max-width:600px){
+@media(max-width:600px){
 
     .galerie-clients{
-
         grid-template-columns:1fr;
-
     }
 
+}
+   
 /* =====================================================
    CARTES SERVICES
 ===================================================== */
