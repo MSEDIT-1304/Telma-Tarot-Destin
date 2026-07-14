@@ -415,6 +415,70 @@ MOBILE
 
 }
 
+/* =====================================================
+   RETOURS CLIENTS
+===================================================== */
+
+.galerie-clients{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
 }
+
+.galerie-clients img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    border:2px solid #d4af37;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.30),
+        0 0 30px rgba(120,70,180,.15);
+
+    transition:.30s;
+
+}
+
+.galerie-clients img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,.55),
+        0 0 35px rgba(120,70,180,.35);
+
+}
+
+@media (max-width:900px){
+
+    .galerie-clients{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .galerie-clients{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
 
 
