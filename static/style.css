@@ -1,1 +1,290 @@
+/* ==========================================================
+   TELMA - TAROT DESTIN
+   Style Premium
+========================================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:#07040d;
+
+    color:#f2f2f2;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   BANNIERE
+========================================================== */
+
+.banniere{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   CONTENU
+========================================================== */
+
+main{
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    padding:0 25px;
+
+}
+
+/* ==========================================================
+   TITRES
+========================================================== */
+
+h1{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+}
+
+.slogan{
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#b68cff;
+
+    font-style:italic;
+
+    margin-bottom:60px;
+
+}
+
+h2{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+    font-size:32px;
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   CARTES PREMIUM
+========================================================== */
+
+.carte-premium{
+
+    background:linear-gradient(180deg,#11071b,#0a0613);
+
+    border:1px solid #d4af37;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    margin-bottom:45px;
+
+    box-shadow:
+        0 0 18px rgba(130,70,180,.18),
+        0 0 35px rgba(212,175,55,.10);
+
+    transition:.35s;
+
+}
+
+.carte-premium:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(130,70,180,.30),
+        0 0 45px rgba(212,175,55,.22);
+
+}
+
+.carte-premium p{
+
+    margin-bottom:18px;
+
+    text-align:justify;
+
+}
+
+.carte-premium ul{
+
+    margin-left:30px;
+
+    margin-bottom:20px;
+
+}
+
+.carte-premium li{
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================================
+   ALERTE
+========================================================== */
+
+.alerte-medicale{
+
+    background:#1a0d20;
+
+    border-left:5px solid #d4af37;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    margin-top:30px;
+
+    color:#fff0d5;
+
+}
+
+/* ==========================================================
+   BOUTONS
+========================================================== */
+
+.btn-premium{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:linear-gradient(180deg,#e5c35c,#b88719);
+
+    color:#111;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:15px 34px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.btn-premium:hover{
+
+    transform:translateY(-2px);
+
+    background:linear-gradient(180deg,#f5d878,#c79722);
+
+    box-shadow:0 0 18px rgba(212,175,55,.40);
+
+}
+
+/* ==========================================================
+   LIENS
+========================================================== */
+
+a{
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    color:#f0d47b;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:60px;
+
+    border-top:1px solid rgba(212,175,55,.25);
+
+    color:#d6d6d6;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+main{
+
+    margin:30px auto;
+
+    padding:18px;
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+h2{
+
+    font-size:26px;
+
+}
+
+.slogan{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.carte-premium{
+
+    padding:25px;
+
+}
+
+.btn-premium{
+
+    width:100%;
+
+}
+
+}
