@@ -72,6 +72,10 @@ def services():
 def contact():
     return render_template("contact.html")
 
+@app.route("/retours-clients")
+def retours_clients():
+    return render_template("retours_clients.html")
+
 
 @app.route("/panier")
 def panier():
