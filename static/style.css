@@ -357,6 +357,64 @@ MOBILE
 
 }
 
+...
+
+/* ==========================================
+   TABLEAU PANIER
+========================================== */
+
+.table-panier{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.table-panier th{
+
+    color:#d4af37;
+
+    border-bottom:1px solid #d4af37;
+
+    padding:15px;
+
+}
+
+.table-panier td{
+
+    padding:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+}
+
+.btn-supprimer{
+
+    background:#772222;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-supprimer:hover{
+
+    background:#a53030;
+
 }
 
 }
+
+
