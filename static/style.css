@@ -467,8 +467,10 @@ MENU
     justify-content:center;
 
     align-items:center;
+   
+    flex-wrap:wrap;
 
-    gap:35px;
+    gap:55px;
 
     padding:18px 0;
 
@@ -484,7 +486,7 @@ MENU
 
     display:inline-block;
 
-    padding:12px 28px;
+    padding:14px 34px;
 
     border:1px solid #d4af37;
 
