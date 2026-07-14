@@ -1,1 +1,130 @@
+{% extends "base.html" %}
 
+{% block content %}
+
+<h1>Merci pour votre confiance</h1>
+
+<p class="slogan">
+Votre paiement a été validé avec succès.
+</p>
+
+<div class="carte-premium">
+
+    <h2>Votre consultation</h2>
+
+    <p>
+
+        Afin que je puisse réaliser votre consultation dans les meilleurs délais,
+        merci de m'envoyer les informations correspondant à votre commande.
+
+    </p>
+
+    <div class="alerte-medicale">
+
+        <strong>Adresse e-mail :</strong>
+
+        <br><br>
+
+        <a href="mailto:tarot.destin@gmail.com">
+
+            <strong>📧 tarot.destin@gmail.com</strong>
+
+        </a>
+
+        <br><br>
+
+        Selon votre commande, merci de transmettre :
+
+        <br><br>
+
+        ✔ Tirage simple : 3 numéros (de 1 à 52) + 1 question
+
+        <br>
+
+        ✔ Tirage complet : 7 numéros (de 1 à 52) + 1 question
+
+        <br>
+
+        ✔ Pendule : vos 3 questions précises
+
+    </div>
+
+    <br>
+
+    <p>
+
+        Votre consultation sera réalisée dès réception de votre e-mail.
+
+    </p>
+
+</div>
+
+
+
+<div class="carte-premium">
+
+    <h2>Quelques témoignages de consultants</h2>
+
+    <p>
+
+        Depuis plusieurs années,
+        <strong>plus de 650 consultants</strong>
+        m'ont accordé leur confiance.
+
+    </p>
+
+    <p>
+
+        Les témoignages ci-dessous ne représentent
+        qu'une petite sélection des nombreux retours
+        reçus au fil des années.
+
+    </p>
+
+    <div class="galerie">
+
+        <img src="{{ url_for('static', filename='images/client1.png') }}" alt="Témoignage client">
+
+        <img src="{{ url_for('static', filename='images/client2.png') }}" alt="Témoignage client">
+
+        <img src="{{ url_for('static', filename='images/client3.png') }}" alt="Témoignage client">
+
+        <img src="{{ url_for('static', filename='images/client4.png') }}" alt="Témoignage client">
+
+        <img src="{{ url_for('static', filename='images/client5.png') }}" alt="Témoignage client">
+
+        <img src="{{ url_for('static', filename='images/client6.png') }}" alt="Témoignage client">
+
+    </div>
+
+</div>
+
+
+
+<div class="carte-premium">
+
+    <h2>Merci ❤️</h2>
+
+    <p>
+
+        Merci à toutes les personnes qui m'ont accordé leur confiance.
+
+        Chaque consultation est réalisée avec sérieux,
+        discrétion, bienveillance et dans le respect
+        de chacun.
+
+    </p>
+
+    <p>
+
+        Au plaisir de vous accompagner.
+
+    </p>
+
+    <h2 style="margin-top:25px;">
+        Telma – Tarot Destin
+    </h2>
+
+</div>
+
+{% endblock %}
