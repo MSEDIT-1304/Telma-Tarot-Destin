@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Telma - Tarot Destin</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <img src="{{ url_for('static', filename='images/banniere-telma.jpg') }}"
+         alt="Telma - Tarot Destin"
+         class="banniere">
+
+</header>
+
+<nav class="navbar">
+
+    <a href="/">Accueil</a>
+
+    <a href="/services">Consultations</a>
+
+    <a href="/tarifs">Tarifs</a>
+
+    <a href="/contact">Contact</a>
+
+</nav>
+
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+<footer>
+
+    © 2026 Telma - Tarot Destin · Tous droits réservés.
+
+</footer>
+
+</body>
+
+</html>
