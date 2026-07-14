@@ -2,6 +2,10 @@ from flask import Flask, render_template, redirect, session, url_for, request
 import stripe
 import os
 
+# ==========================================================
+# APPLICATION
+# ==========================================================
+
 app = Flask(__name__)
 
 app.secret_key = "telma_tarot_destin_panier_2026"
@@ -37,7 +41,7 @@ PRODUITS = {
 # FONCTIONS
 # ==========================================================
 
-def panier():
+def get_panier():
 
     if "panier" not in session:
         session["panier"] = []
@@ -45,14 +49,9 @@ def panier():
     return session["panier"]
 
 
-def total_panier():
+def calcul_total():
 
-    total = 0
-
-    for article in panier():
-        total += article["prix"]
-
-    return total
+    return sum(article["prix"] for article in get_panier())
 
 
 # ==========================================================
@@ -61,36 +60,36 @@ def total_panier():
 
 @app.route("/")
 def accueil():
-
     return render_template("index.html")
 
 
 @app.route("/services")
 def services():
-
     return render_template("services.html")
 
 
 @app.route("/contact")
 def contact():
-
     return render_template("contact.html")
 
 
 @app.route("/panier")
-def voir_panier():
+def panier():
 
     return render_template(
-
         "panier.html",
-
-        articles=panier(),
-
-        total=total_panier()
-
+        articles=get_panier(),
+        total=calcul_total()
     )
 
 
+@app.route("/remerciements")
+def remerciements():
+
+    return render_template(
+        "remerciements.html",
+        commandes=[]
+    )
 # ==========================================================
 # AJOUT AU PANIER
 # ==========================================================
@@ -99,10 +98,16 @@ def voir_panier():
 def ajouter(produit):
 
     if produit not in PRODUITS:
-
         return redirect(url_for("services"))
 
-    article = {
+    panier = get_panier()
+
+    # Empêche les doublons
+    for article in panier:
+        if article["code"] == produit:
+            return redirect(url_for("panier"))
+
+    panier.append({
 
         "code": produit,
 
@@ -110,17 +115,14 @@ def ajouter(produit):
 
         "prix": PRODUITS[produit]["prix"]
 
-    }
+    })
 
-    p = panier()
-
-    p.append(article)
-
-    session["panier"] = p
+    session["panier"] = panier
 
     session.modified = True
 
-    return redirect(url_for("voir_panier"))
+    return redirect(url_for("panier"))
+
 
 # ==========================================================
 # SUPPRIMER DU PANIER
@@ -129,22 +131,15 @@ def ajouter(produit):
 @app.route("/supprimer/<produit>")
 def supprimer(produit):
 
-    p = panier()
+    panier = get_panier()
 
-    for article in p:
+    panier = [article for article in panier if article["code"] != produit]
 
-        if article["code"] == produit:
-
-            p.remove(article)
-
-            break
-
-    session["panier"] = p
+    session["panier"] = panier
 
     session.modified = True
 
-    return redirect(url_for("voir_panier"))
-
+    return redirect(url_for("panier"))
 
 # ==========================================================
 # PAIEMENT STRIPE
@@ -153,13 +148,12 @@ def supprimer(produit):
 @app.route("/payer")
 def payer():
 
-    if len(panier()) == 0:
-
-        return redirect(url_for("voir_panier"))
+    if len(get_panier()) == 0:
+        return redirect(url_for("panier"))
 
     line_items = []
 
-    for article in panier():
+    for article in get_panier():
 
         line_items.append({
 
@@ -173,7 +167,7 @@ def payer():
 
                 },
 
-                "unit_amount": int(article["prix"] * 100)
+                "unit_amount": article["prix"] * 100
 
             },
 
@@ -181,7 +175,7 @@ def payer():
 
         })
 
-    checkout = stripe.checkout.Session.create(
+    checkout_session = stripe.checkout.Session.create(
 
         payment_method_types=["card"],
 
@@ -189,22 +183,23 @@ def payer():
 
         mode="payment",
 
-        success_url=request.host_url.rstrip("/") + "/success",
+        success_url=request.host_url.rstrip("/") + url_for("success"),
 
-        cancel_url=request.host_url.rstrip("/") + "/cancel"
+        cancel_url=request.host_url.rstrip("/") + url_for("cancel")
 
     )
 
-    return redirect(checkout.url, code=303)
+    return redirect(checkout_session.url, code=303)
+
 
 # ==========================================================
-# PAIEMENT VALIDE
+# PAIEMENT ACCEPTE
 # ==========================================================
 
 @app.route("/success")
 def success():
 
-    commandes = list(panier())
+    commandes = list(get_panier())
 
     session["panier"] = []
 
@@ -218,6 +213,7 @@ def success():
 
     )
 
+
 # ==========================================================
 # PAIEMENT ANNULE
 # ==========================================================
@@ -225,7 +221,7 @@ def success():
 @app.route("/cancel")
 def cancel():
 
-    return redirect(url_for("voir_panier"))
+    return redirect(url_for("panier"))
 
 
 # ==========================================================
@@ -235,7 +231,12 @@ def cancel():
 if __name__ == "__main__":
 
     app.run(
+
         host="0.0.0.0",
+
         port=int(os.environ.get("PORT", 5000)),
-        debug=True
+
+        debug=False
+
     )
+
