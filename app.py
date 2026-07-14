@@ -76,7 +76,6 @@ def contact():
 def retours_clients():
     return render_template("retours_clients.html")
 
-
 @app.route("/panier")
 def panier():
 
