@@ -8,173 +8,240 @@
 Choisissez la consultation qui correspond le mieux à votre besoin.
 </p>
 
-<div class="grille-cartes">
+<div class="carte-premium">
 
-    <!-- ===================== -->
-    <!-- Tirage simple -->
-    <!-- ===================== -->
+    <h2>Tirage simple – 30 €</h2>
 
-    <div class="carte-premium">
+    <img src="{{ url_for('static', filename='image/tirage_simple.png') }}"
+         alt="Tirage simple"
+         class="image-service">
 
-        <h2>Tirage simple</h2>
+    <p>
 
-        <div class="prix">
-            30 €
-        </div>
+        Choisissez <strong>3 numéros</strong> entre <strong>1 et 52</strong>.
 
-        <ul>
+    </p>
 
-            <li>Choisissez <strong>3 numéros</strong> entre <strong>1 et 52</strong>.</li>
+    <p>
 
-            <li>Posez <strong>1 question précise</strong>.</li>
+        Posez <strong>1 question précise</strong>.
 
-            <li><strong>Résumé du tirage :</strong></li>
+    </p>
 
-            <li>❤️ Amour</li>
+    <p>
 
-            <li>💰 Argent</li>
+        <strong>Résumé du tirage :</strong>
 
-            <li>💼 Travail</li>
+    </p>
 
-            <li>Réponse complète et personnalisée à votre question.</li>
+    <ul>
 
-        </ul>
+        <li>❤️ Amour</li>
 
-        <div class="alerte-medicale">
+        <li>💰 Argent</li>
 
-            <strong>Après validation de votre paiement :</strong><br><br>
+        <li>💼 Travail</li>
 
-            Envoyez vos <strong>3 numéros</strong> ainsi que votre question à :
+    </ul>
 
-            <br><br>
+    <p>
 
-            <strong>📧 tarot.destin@gmail.com</strong>
+        Réponse complète et personnalisée à votre question.
 
-            <br><br>
+    </p>
 
-            (Lien disponible dans la page Contact.)
+    <p>
 
-        </div>
+        <strong>Après votre paiement</strong>, envoyez par e-mail :
 
-        <br>
+        <br><br>
 
-        <a href="/ajouter/tirage_simple">
-            <button class="btn-premium">
-                Ajouter au panier
-            </button>
-        </a>
-
-    </div>
-
-    <!-- ===================== -->
-    <!-- Tirage complet -->
-    <!-- ===================== -->
-
-    <div class="carte-premium">
-
-        <h2>Tirage complet</h2>
-
-        <div class="prix">
-            50 €
-        </div>
-
-        <ul>
-
-            <li>Choisissez <strong>7 numéros</strong> entre <strong>1 et 52</strong>.</li>
-
-            <li>Posez <strong>1 question précise</strong>.</li>
-
-            <li><strong>Analyse complète du tirage :</strong></li>
-
-            <li>❤️ Amour</li>
-
-            <li>💰 Argent</li>
-
-            <li>💼 Travail</li>
-
-            <li>❤️‍🩹 Santé</li>
-
-            <li>Réponse complète et personnalisée à votre question.</li>
-
-        </ul>
-
-        <div class="alerte-medicale">
-
-            <strong>Après validation de votre paiement :</strong><br><br>
-
-            Envoyez vos <strong>7 numéros</strong> ainsi que votre question à :
-
-            <br><br>
-
-            <strong>📧 tarot.destin@gmail.com</strong>
-
-            <br><br>
-
-            (Lien disponible dans la page Contact.)
-
-        </div>
+        • vos <strong>3 numéros</strong>
 
         <br>
 
-        <a href="/ajouter/tirage_complet">
-            <button class="btn-premium">
-                Ajouter au panier
-            </button>
-        </a>
+        • votre <strong>question</strong>
 
-    </div>
+        <br><br>
 
-    <!-- ===================== -->
-    <!-- Pendule -->
-    <!-- ===================== -->
+        à <strong>tarot.destin@gmail.com</strong>
 
-    <div class="carte-premium">
+    </p>
 
-        <h2>Consultation au pendule</h2>
+    <form action="/ajouter-panier" method="post">
 
-        <div class="prix">
-            30 €
-        </div>
+        <input type="hidden" name="service" value="simple">
 
-        <ul>
+        <button class="btn-or">Ajouter au panier</button>
 
-            <li>Jusqu'à <strong>3 questions précises</strong>.</li>
+    </form>
 
-            <li>Réponses par <strong>Oui / Non</strong>.</li>
+</div>
 
-            <li>Aide à la décision.</li>
+<div class="carte-premium">
 
-            <li>Orientation d'un choix.</li>
+    <h2>Tirage complet – 50 €</h2>
 
-            <li>Recherche d'objet perdu possible.</li>
+    <img src="{{ url_for('static', filename='image/tirage_complet.png') }}"
+         alt="Tirage complet"
+         class="image-service">
 
-        </ul>
+    <p>
 
-        <div class="alerte-medicale">
+        Choisissez <strong>7 numéros</strong> entre <strong>1 et 52</strong>.
 
-            <strong>Après validation de votre paiement :</strong><br><br>
+    </p>
 
-            Envoyez vos <strong>3 questions</strong> à :
+    <p>
 
-            <br><br>
+        Posez <strong>1 question précise</strong>.
 
-            <strong>📧 tarot.destin@gmail.com</strong>
+    </p>
 
-            <br><br>
+    <p>
 
-            (Lien disponible dans la page Contact.)
+        <strong>Analyse complète du tirage :</strong>
 
-        </div>
+    </p>
+
+    <ul>
+
+        <li>❤️ Amour</li>
+
+        <li>💰 Argent</li>
+
+        <li>💼 Travail</li>
+
+        <li>🩺 Santé</li>
+
+    </ul>
+
+    <p>
+
+        Réponse complète et personnalisée à votre question.
+
+    </p>
+
+    <p>
+
+        <strong>Après votre paiement</strong>, envoyez par e-mail :
+
+        <br><br>
+
+        • vos <strong>7 numéros</strong>
 
         <br>
 
-        <a href="/ajouter/pendule">
-            <button class="btn-premium">
-                Ajouter au panier
-            </button>
-        </a>
+        • votre <strong>question</strong>
 
-    </div>
+        <br><br>
+
+        à <strong>tarot.destin@gmail.com</strong>
+
+    </p>
+
+    <form action="/ajouter-panier" method="post">
+
+        <input type="hidden" name="service" value="complet">
+
+        <button class="btn-or">Ajouter au panier</button>
+
+    </form>
+
+</div>
+
+<div class="carte-premium">
+
+    <h2>Pendule – 30 €</h2>
+
+    <img src="{{ url_for('static', filename='image/tirage_pendule.png') }}"
+         alt="Pendule"
+         class="image-service">
+
+    <p>
+
+        Posez <strong>3 questions précises</strong>.
+
+    </p>
+
+    <p>
+
+        Le pendule permet d'obtenir une réponse claire de type
+
+        <strong>Oui / Non</strong>.
+
+    </p>
+
+    <p>
+
+        Exemples :
+
+    </p>
+
+    <ul>
+
+        <li>Vais-je me marier cette année ? → Oui / Non</li>
+
+        <li>Vais-je changer de travail ? → Oui / Non</li>
+
+        <li>Où se trouve ma bague perdue ?</li>
+
+    </ul>
+
+    <p>
+
+        Exemple :
+
+        <br>
+
+        1. Cuisine ?
+
+        <br>
+
+        2. Chambre ?
+
+        <br>
+
+        3. Salle de bain ?
+
+        <br><br>
+
+        Réponse :
+
+        <br>
+
+        1 ❌
+
+        <br>
+
+        2 ✅
+
+        <br>
+
+        3 ❌
+
+    </p>
+
+    <p>
+
+        <strong>Après votre paiement</strong>, envoyez vos
+
+        <strong>3 questions</strong>
+
+        à <strong>tarot.destin@gmail.com</strong>
+
+    </p>
+
+    <form action="/ajouter-panier" method="post">
+
+        <input type="hidden" name="service" value="pendule">
+
+        <button class="btn-or">Ajouter au panier</button>
+
+    </form>
+
+</div>   
+
 
 </div>
 
