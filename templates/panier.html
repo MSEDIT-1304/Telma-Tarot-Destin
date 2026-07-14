@@ -1,1 +1,91 @@
+{% extends "base.html" %}
 
+{% block content %}
+
+<h1>Mon panier</h1>
+
+<p class="slogan">
+Vérifiez votre commande avant de procéder au paiement sécurisé.
+</p>
+
+<div class="carte-premium">
+
+{% if articles %}
+
+<table class="table-panier">
+
+<tr>
+
+<th>Consultation</th>
+
+<th>Prix</th>
+
+<th></th>
+
+</tr>
+
+{% for article in articles %}
+
+<tr>
+
+<td>{{ article.nom }}</td>
+
+<td>{{ article.prix }} €</td>
+
+<td>
+
+<a href="/supprimer/{{ article.code }}">
+
+<button class="btn-supprimer">
+
+Supprimer
+
+</button>
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<hr>
+
+<h2 style="text-align:center;">
+
+Total : {{ total }} €
+
+</h2>
+
+<br>
+
+<div style="text-align:center;">
+
+<a href="/payer">
+
+<button class="btn-premium">
+
+Payer en toute sécurité
+
+</button>
+
+</a>
+
+</div>
+
+{% else %}
+
+<p style="text-align:center;">
+
+Votre panier est actuellement vide.
+
+</p>
+
+{% endif %}
+
+</div>
+
+{% endblock %}
