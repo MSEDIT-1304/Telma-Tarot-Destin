@@ -1,1 +1,115 @@
+{% extends "base.html" %}
 
+{% block content %}
+
+<section class="hero">
+
+    <h1>Telma - Tarot Destin</h1>
+
+    <p class="slogan">
+        Éclairez votre chemin, révélez votre destinée.
+    </p>
+
+</section>
+
+
+<div class="carte-premium">
+
+    <h2>Qu'est-ce que la voyance ?</h2>
+
+    <p>
+        La voyance est une pratique intuitive qui permet d'apporter un éclairage sur une situation,
+        de mieux comprendre certains événements et d'explorer les différentes possibilités qui
+        s'offrent à vous. Elle ne prédit pas un avenir figé, mais vous accompagne dans votre réflexion
+        afin de prendre vos décisions avec davantage de sérénité.
+    </p>
+
+    <div class="alerte-medicale">
+
+        <strong>Important</strong><br><br>
+
+        La voyance ne remplace jamais un médecin, un diagnostic médical,
+        un traitement ou un suivi psychologique.
+        Pour toute question concernant votre santé physique ou mentale,
+        consultez impérativement un professionnel de santé qualifié.
+
+    </div>
+
+</div>
+
+
+<div class="carte-premium">
+
+    <h2>Qu'est-ce que le pendule ?</h2>
+
+    <p>
+        Le pendule est un outil de radiesthésie utilisé pour accompagner les recherches,
+        orienter une décision ou répondre à une question précise.
+        Il constitue un support permettant au praticien d'interpréter les informations
+        perçues grâce à son intuition et à son expérience.
+    </p>
+
+    <p>
+        Il est particulièrement adapté aux questions dont la réponse est simplement
+        <strong>Oui</strong> ou <strong>Non</strong>.
+    </p>
+
+    <p><strong>Exemples :</strong></p>
+
+    <ul>
+
+        <li>Vais-je me marier cette année ? → Oui / Non</li>
+
+        <li>Vais-je retrouver un emploi prochainement ? → Oui / Non</li>
+
+        <li>Ce projet est-il favorable pour moi ? → Oui / Non</li>
+
+    </ul>
+
+    <p>
+        Le pendule peut également être utilisé afin d'orienter une recherche.
+    </p>
+
+    <p><strong>Exemple :</strong></p>
+
+    <p>
+        Où se trouve la bague que j'ai perdue ?
+    </p>
+
+    <ul>
+
+        <li>1. Cuisine ❌ Non</li>
+
+        <li>2. Chambre ✅ Oui</li>
+
+        <li>3. Salle de bain ❌ Non</li>
+
+    </ul>
+
+    <p>
+        Les réponses obtenues doivent toujours être interprétées avec discernement
+        et ne remplacent jamais votre libre arbitre.
+    </p>
+
+</div>
+
+
+<div class="carte-premium">
+
+    <h2>Une guidance en toute bienveillance</h2>
+
+    <p>
+        Chaque consultation est réalisée dans un climat d'écoute, de respect et de confidentialité.
+        Mon objectif est de vous accompagner avec sincérité afin de vous apporter un éclairage
+        sur votre situation, sans jugement et en toute transparence.
+    </p>
+
+    <a href="{{ url_for('services') }}">
+        <button class="btn-premium">
+            Découvrir les consultations
+        </button>
+    </a>
+
+</div>
+
+{% endblock %}
