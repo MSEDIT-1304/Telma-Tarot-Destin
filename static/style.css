@@ -287,4 +287,76 @@ h2{
 
 }
 
+/*==================================================
+MENU
+==================================================*/
+
+.navbar{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px;
+
+    background:#12071d;
+
+    border-top:1px solid rgba(212,175,55,.25);
+
+    border-bottom:1px solid rgba(212,175,55,.25);
+
+}
+
+.navbar a{
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    transition:.30s;
+
+    font-weight:600;
+
+}
+
+.navbar a:hover{
+
+    background:#4d2168;
+
+    color:white;
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.navbar a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+}
+
 }
