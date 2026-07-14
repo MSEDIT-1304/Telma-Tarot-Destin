@@ -2,185 +2,74 @@
 
 {% block content %}
 
-<section class="hero">
+<h1>Retours clients</h1>
 
-    <h1>Retours clients</h1>
+<p class="slogan">
+Quelques retours parmi plus de <strong>650 clients satisfaits</strong>.
+</p>
 
-    <p class="slogan">
-        Quelques retours parmi plus de <strong>650 clients satisfaits</strong>.
-    </p>
-
-</section>
-
-<section class="carte-premium">
+<div class="carte-premium">
 
     <h2>Merci pour votre confiance</h2>
 
-    <p>
+    <p style="text-align:center;">
 
-        Depuis plusieurs années, j'ai eu le plaisir d'accompagner
-        des centaines de personnes dans leurs interrogations
-        sentimentales, professionnelles, financières ou personnelles.
+        Depuis plusieurs années, des centaines de personnes
+        m'ont accordé leur confiance.
 
-    </p>
+        <br><br>
 
-    <p>
-
-        Voici quelques exemples de retours reçus après des consultations.
-        Ils ne représentent qu'une petite partie des nombreux témoignages
-        que j'ai eu le bonheur de recevoir.
+        Les témoignages ci-dessous ne représentent
+        qu'une petite partie des nombreux retours reçus.
 
     </p>
 
-    <p>
+</div>
 
-        <strong>Plus de 650 personnes m'ont déjà accordé leur confiance.</strong>
+<div class="galerie-clients">
 
-    </p>
+    <img src="{{ url_for('static', filename='image/client1.png') }}" alt="Client 1">
 
-</section>
+    <img src="{{ url_for('static', filename='image/client2.png') }}" alt="Client 2">
 
-<section class="galerie-clients">
+    <img src="{{ url_for('static', filename='image/client3.png') }}" alt="Client 3">
 
-    <img src="{{ url_for('static', filename='image/client1.png') }}" alt="Retour client 1">
+    <img src="{{ url_for('static', filename='image/client4.png') }}" alt="Client 4">
 
-    <img src="{{ url_for('static', filename='image/client2.png') }}" alt="Retour client 2">
+    <img src="{{ url_for('static', filename='image/client5.png') }}" alt="Client 5">
 
-    <img src="{{ url_for('static', filename='image/client3.png') }}" alt="Retour client 3">
+    <img src="{{ url_for('static', filename='image/client6.png') }}" alt="Client 6">
 
-    <img src="{{ url_for('static', filename='image/client4.png') }}" alt="Retour client 4">
+</div>
 
-    <img src="{{ url_for('static', filename='image/client5.png') }}" alt="Retour client 5">
+<div class="carte-premium">
 
-    <img src="{{ url_for('static', filename='image/client6.png') }}" alt="Retour client 6">
+    <h2>À votre tour…</h2>
 
-</section>
-
-<section class="carte-premium">
-
-    <h2>À votre tour...</h2>
-
-    <p>
+    <p style="text-align:center;">
 
         Chaque consultation est réalisée avec sérieux,
-        bienveillance et confidentialité.
+        discrétion et bienveillance.
 
-    </p>
-
-    <p>
+        <br><br>
 
         Si vous souhaitez obtenir un éclairage sur votre situation,
         je serai heureuse de vous accompagner.
 
     </p>
 
-    <p>
-
-        Retrouvez les différents tirages dans la rubrique
-        <strong>Consultations</strong>.
-
-    </p>
-
-</section>
-
-{% extends "base.html" %}
-
-{% block content %}
-
-<section class="hero">
-
-    <h1>Retours clients</h1>
-
-    <p class="slogan">
-        Quelques retours parmi plus de <strong>650 clients satisfaits</strong>.
-    </p>
-
-</section>
-
-<section class="carte-premium">
-
-    <h2>Merci pour votre confiance</h2>
-
-    <p>
-
-        Depuis plusieurs années, j'ai eu le plaisir d'accompagner
-        des centaines de personnes dans leurs interrogations
-        sentimentales, professionnelles, financières ou personnelles.
-
-    </p>
-
-    <p>
-
-        Voici quelques exemples de retours reçus après des consultations.
-        Ils ne représentent qu'une petite partie des nombreux témoignages
-        que j'ai eu le bonheur de recevoir.
-
-    </p>
-
-    <p>
-
-        <strong>Plus de 650 personnes m'ont déjà accordé leur confiance.</strong>
-
-    </p>
-
-</section>
-
-<section class="galerie-clients">
-
-    <img src="{{ url_for('static', filename='image/client1.png') }}" alt="Retour client 1">
-
-    <img src="{{ url_for('static', filename='image/client2.png') }}" alt="Retour client 2">
-
-    <img src="{{ url_for('static', filename='image/client3.png') }}" alt="Retour client 3">
-
-    <img src="{{ url_for('static', filename='image/client4.png') }}" alt="Retour client 4">
-
-    <img src="{{ url_for('static', filename='image/client5.png') }}" alt="Retour client 5">
-
-    <img src="{{ url_for('static', filename='image/client6.png') }}" alt="Retour client 6">
-
-</section>
-
-<section class="carte-premium">
-
-    <h2>À votre tour...</h2>
-
-    <p>
-
-        Chaque consultation est réalisée avec sérieux,
-        bienveillance et confidentialité.
-
-    </p>
-
-    <p>
-
-        Si vous souhaitez obtenir un éclairage sur votre situation,
-        je serai heureuse de vous accompagner.
-
-    </p>
-
-    <p>
-
-        Retrouvez les différents tirages dans la rubrique
-        <strong>Consultations</strong>.
-
-    </p>
-
-</section>
+</div>
 
 <br><br>
 
 <br><br>
 
 <br><br>
+
 <footer>
 
     © 2026 Telma - Tarot Destin · Tous droits réservés.
 
 </footer>
 
-
 {% endblock %}
-
-
-
