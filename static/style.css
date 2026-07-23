@@ -934,5 +934,32 @@ form textarea:focus{
         min-width:unset;
 
     }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-contenu {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-contenu p {
+    margin: 6px 0;
+}
+
+.footer-contenu a {
+    color: #b38b3d;
+    text-decoration: none;
+}
+
+.footer-contenu a:hover {
+    text-decoration: underline;
+}
 
 }
